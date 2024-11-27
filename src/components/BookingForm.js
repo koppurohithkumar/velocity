@@ -44,9 +44,10 @@ export const BookingForm = () => {
         BOOK A CAR
       </h1>
       <form
-        onSubmit={() =>
-          window.confirm("We have a car with your requirements procced to book")
-        }
+        onSubmit={() => {
+          let res = window.confirm("Car is available, clisk OK to proceed");
+          res ? alert("Thank you for booking") : alert("Bokking canceled");
+        }}
         className="p-10 grid grid-flow-row gap-8 justify-center md:grid-cols-3 md:justify-around md:gap-5"
       >
         {data.map((d) => {
@@ -74,7 +75,7 @@ export const BookingForm = () => {
                 </select>
               ) : (
                 <input
-                  className="px-7 py-0.5 text-xs w-fit"
+                  className="w-60 px-7 py-0.5 text-xs"
                   id="carType"
                   placeholder={d.placeholder}
                   type={d.type}
@@ -84,7 +85,7 @@ export const BookingForm = () => {
             </div>
           );
         })}
-        <button className="text-xs bg-primary text-secondary self-center md:h-1/2">
+        <button className="py-2 text-xs bg-primary text-secondary self-center md:h-1/2 md:p-0">
           Search
         </button>
       </form>

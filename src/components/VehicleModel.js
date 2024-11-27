@@ -105,7 +105,7 @@ export const VehicleModel = () => {
           {cars.map((car) => (
             <li
               key={car.id}
-              className="p-1 w-[300px] text-center list-none text-sm hover:bg-primary hover:text-secondary"
+              className="p-1 w-[300px] text-center list-none text-sm flex items-center justify-center hover:bg-primary hover:text-secondary"
               onClick={() => {
                 setCar(car);
               }}

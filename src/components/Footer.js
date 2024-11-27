@@ -57,13 +57,9 @@ export const Footer = () => {
         </section>
         <section>
           <h2 className="font-bold text-lg mb-3 text-primary">SUBSCRIPTION</h2>
-          <div className="text-sm grid gap-2">
+          <div className="text-sm flex flex-col gap-2">
             <h5>Subscribe your e-mail address for latest news and updates</h5>
-            <input
-              className="text-center"
-              placeholder="Enter Email Address"
-            ></input>
-            <br></br>
+            <input className="text-center" placeholder="Enter Email Address" />
             <button className="bg-primary py-2 text-secondary">Submit</button>
           </div>
         </section>
